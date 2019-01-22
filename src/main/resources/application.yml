@@ -1,0 +1,40 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /api/
+
+spring:
+#  profiles:
+#    active: staging
+  datasource:
+        url: jdbc:mysql://localhost:3306/growth?characterEncoding=utf8&useUnicode=true&autoReconnectForPools=true&zeroDateTimeBehavior=convertToNull&useSSL=false&includeInnodbStatusInDeadlockExceptions=true
+        username: root
+        password:
+        type: com.zaxxer.hikari.HikariDataSource
+
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 10MB
+
+  jackson:
+      date-format: yyyy-MM-dd HH:mm:ss
+      time-zone: GMT+08
+
+  jpa:
+    show-sql: false
+auth:
+  username: growth
+  password: zIasp53HX24mFSke
+#Basic cXVlc3Rpb25uYWlyZTp6SWFzcDUzSFgyNG1GU2tl
+  app:
+    username: app
+    password: JQzr6lVTZioD97oQ
+
+app:
+  qiniu:
+    accessKey: CBLXpYJcUbuJvrTPmzi2Jrwql2_-x_kkd-agdOu4
+    secretKey: b5eK7jt_ViGNPL041dsKKEfTU1gMGOZc0ZJb91FT
+    bucket: mini-app
+    baseUrl: https://img.dahezi.com/
+    filePath: growth/dev/
