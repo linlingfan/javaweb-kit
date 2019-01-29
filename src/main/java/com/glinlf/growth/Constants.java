@@ -1,4 +1,4 @@
-package glinlf.growth;
+package com.glinlf.growth;
 
 import java.util.List;
 

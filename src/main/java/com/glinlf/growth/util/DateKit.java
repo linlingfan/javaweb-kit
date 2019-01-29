@@ -1,4 +1,4 @@
-package glinlf.growth.util;
+package com.glinlf.growth.util;
 
 import java.sql.Timestamp;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.util.Locale;
 import java.util.UUID;
 
 /**
- * @author glinlf
+ * @author com.glinlf
  * @create 2016-12-30 下午6:00
  */
 public class DateKit {

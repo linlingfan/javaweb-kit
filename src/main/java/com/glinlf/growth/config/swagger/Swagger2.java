@@ -1,4 +1,4 @@
-package glinlf.growth.config.swagger;
+package com.glinlf.growth.config.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +11,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @author created by glinlf
+ * @author created by com.glinlf
  * @data 2018/5/8
  * @remark
  */
