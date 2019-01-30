@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @date 2019/1/29
  * @remark
  */
-public class redisKitTest extends NoRollbackTester {
+public class RedisKitTest extends NoRollbackTester {
 
     @Autowired
     RedisKit redisKit;

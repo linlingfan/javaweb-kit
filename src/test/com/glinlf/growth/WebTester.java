@@ -45,12 +45,14 @@ public abstract class WebTester {
 
     @Autowired
     private WebApplicationContext wac;
-    public static RequestBuilder request; // request 请求对象
+
+    public static RequestBuilder request;
 
     @Before
     public void setup() {
-        //测试方法 模拟request请求 setup mock MVC
+        //测试方法- 模拟request请求 setup mock MVC
         this.mockMvc = MockMvcBuilders
+                // 整个环境做测试，包括Interceptor
                 .webAppContextSetup(this.wac)
                 .build();
 
@@ -74,6 +76,12 @@ public abstract class WebTester {
 
     }
 
+    /**
+     * @param method
+     * @param uri
+     * @param auth   校验头
+     * @return
+     */
     public static MockHttpServletRequestBuilder requestKit(HttpMethod method, String uri, String auth) {
 
         return MockMvcRequestBuilders
@@ -82,18 +90,6 @@ public abstract class WebTester {
                 .header("Authorization", auth);
     }
 
-    /**
-     * request perform result
-     *
-     * @param request
-     * @throws Exception
-     */
-    public static void performKit(RequestBuilder request) throws Exception {
-
-        mockMvc.perform(request)
-                .andExpect(status().isOk())
-                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON_UTF8_VALUE));
-    }
 }
 
 
