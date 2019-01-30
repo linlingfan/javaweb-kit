@@ -1,6 +1,5 @@
-package com.glinlf.growth.util;
+package com.glinlf.growth.utils;
 
-import com.sun.org.apache.xerces.internal.xs.StringList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

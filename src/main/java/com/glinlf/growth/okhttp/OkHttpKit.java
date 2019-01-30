@@ -1,6 +1,5 @@
-package com.glinlf.growth.util.okhttp;
+package com.glinlf.growth.okhttp;
 
-import com.google.common.base.Strings;
 import okhttp3.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

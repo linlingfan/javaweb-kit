@@ -1,5 +1,6 @@
-package com.glinlf.growth.util;
+package com.glinlf.growth.rest;
 
+import com.glinlf.growth.utils.AuthKit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -9,9 +10,6 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.Objects;
 import java.util.function.Supplier;
 
-/**
- * @author 唐芳华
- */
 public final class RestUtils {
 
     final static Logger LOG = LoggerFactory.getLogger(RestUtils.class);

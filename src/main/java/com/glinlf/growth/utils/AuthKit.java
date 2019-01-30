@@ -1,4 +1,4 @@
-package com.glinlf.growth.util;
+package com.glinlf.growth.utils;
 
 import java.nio.charset.Charset;
 import java.util.Base64;

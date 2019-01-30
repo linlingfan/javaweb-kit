@@ -1,9 +1,8 @@
 package com.glinlf.growth.kit;
 
 import com.glinlf.growth.NoRollbackTester;
-import com.glinlf.growth.util.CSVKit;
+import com.glinlf.growth.utils.CSVKit;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 import java.util.List;
