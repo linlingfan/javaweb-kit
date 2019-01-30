@@ -4,8 +4,9 @@ server:
     context-path: /api/
 
 spring:
-#  profiles:
-#    active: staging
+# 指定默认配置
+  profiles:
+    active: dev
   datasource:
         url: jdbc:mysql://localhost:3306/growth?characterEncoding=utf8&useUnicode=true&autoReconnectForPools=true&zeroDateTimeBehavior=convertToNull&useSSL=false&includeInnodbStatusInDeadlockExceptions=true
         username: root
