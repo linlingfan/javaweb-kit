@@ -3,10 +3,14 @@ package com.glinlf.growth.rest;
 import com.glinlf.growth.dto.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.NoHandlerFoundException;
+
+import javax.servlet.http.HttpServlet;
 
 
 /**
@@ -32,7 +36,7 @@ public class RestGlobalException {
     @ResponseBody
     public Result globalException(Throwable e) {
         Result errorInfo = new Result();
-        errorInfo.setCode(500);
+        errorInfo.setCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
         errorInfo.setMessage("未知错误!");
         LOG.debug("[WebGlobalException] 未知错误！", e);
         e.printStackTrace();
@@ -43,18 +47,17 @@ public class RestGlobalException {
     /**
      * 404 not found 异常拦截
      * 做了请求拦截 理论不会出现404
-     * 不做日志记录
      *
      * @param e
      * @return
-     * @throws ServiceException
+     * @throws
      */
     @ExceptionHandler(NoHandlerFoundException.class)
     @ResponseBody
     public Result notFoundException(NoHandlerFoundException e) {
         Result errorInfo = new Result();
         LOG.error("[WebGlobalException] 404 NOT FOUND 异常: {} ", e);
-        errorInfo.setCode(404);
+        errorInfo.setCode(HttpStatus.NOT_FOUND.value());
         errorInfo.setMessage("PAGE NOT FOUND!");
         return errorInfo;
     }
