@@ -6,12 +6,12 @@ server:
 spring:
 # 指定默认配置
   profiles:
-    active: dev
+    active: prod
   datasource:
-        url: jdbc:mysql://localhost:3306/growth?characterEncoding=utf8&useUnicode=true&autoReconnectForPools=true&zeroDateTimeBehavior=convertToNull&useSSL=false&includeInnodbStatusInDeadlockExceptions=true
-        username: root
-        password: 123456
-        type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/growth?characterEncoding=utf8&useUnicode=true&autoReconnectForPools=true&zeroDateTimeBehavior=convertToNull&useSSL=false&includeInnodbStatusInDeadlockExceptions=true
+    username: root
+    password:
+    type: com.zaxxer.hikari.HikariDataSource
 
   servlet:
     multipart:

@@ -6,10 +6,22 @@ server:
 spring:
   datasource:
     growth:
-      url: jdbc:mysql://localhost:3306/growth?characterEncoding=utf8&useUnicode=true&autoReconnectForPools=true&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8&useSSL=false
+      url: jdbc:mysql://47.99.104.191:3306/growth?characterEncoding=utf8&useUnicode=true&autoReconnectForPools=true&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8&useSSL=false
       username: root
       password: 123456
 
+  redis:
+    database: 1
+    host: 47.99.104.191
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 16
+        max-idle: 16
+        min-idle: 0
+        max-wait: -1
+      timeout: 3000
 app:
-  qiniu:
-    filePath: growth/
+    qiniu:
+        filePath: growth/
