@@ -1,5 +1,5 @@
 server:
-  port: 80
+  port: 8000
   servlet:
     context-path: /api/
 
@@ -8,7 +8,7 @@ spring:
     growth:
       url: jdbc:mysql://localhost:3306/growth?characterEncoding=utf8&useUnicode=true&autoReconnectForPools=true&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8&useSSL=false
       username: root
-      password:
+      password: 123456
 
 app:
   qiniu:
