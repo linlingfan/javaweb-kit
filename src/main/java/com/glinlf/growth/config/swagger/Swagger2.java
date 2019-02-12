@@ -25,16 +25,16 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("thelook.growth"))
+                .apis(RequestHandlerSelectors.basePackage("glinlf.growth"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("the look growth api文档")
-                .description("the look growth api文档 created by Swagger2")
-                .termsOfServiceUrl("http://localhost:7089/")
+                .title("growth api文档")
+                .description("growth api文档 created by Swagger2")
+                .termsOfServiceUrl("http://localhost:8000/")
                 .version("1.0")
                 .build();
     }
