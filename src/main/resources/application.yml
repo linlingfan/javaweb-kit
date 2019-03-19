@@ -6,9 +6,9 @@ server:
 spring:
 # 指定默认配置
   profiles:
-    active: prod
+    active: dev
   datasource:
-    url: jdbc:mysql://localhost:3306/growth?characterEncoding=utf8&useUnicode=true&autoReconnectForPools=true&zeroDateTimeBehavior=convertToNull&useSSL=false&includeInnodbStatusInDeadlockExceptions=true
+    url: jdbc:mysql://localhost:3306/growth?characterEncoding=utf8&useUnicode=true&autoReconnectForPools=true&useSSL=false&includeInnodbStatusInDeadlockExceptions=true
     username: root
     password:
     type: com.zaxxer.hikari.HikariDataSource
